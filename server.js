@@ -35,7 +35,7 @@ app.patch("/api/notes/:id", async (req, res) => {
   const updatedNote = await notesModel.findByIdAndUpdate(
     id,
     { title, description },
-    { new: true }, // returns the updated note document
+    { new: true }, 
   );
 
   res.status(200).json({
